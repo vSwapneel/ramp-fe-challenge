@@ -21,7 +21,6 @@ export function App() {
   )
 
   const loadAllTransactions = useCallback(async () => {
-    transactionsByEmployeeUtils.invalidateData()
 
     if(employees == null){
       setIsLoading(true)
