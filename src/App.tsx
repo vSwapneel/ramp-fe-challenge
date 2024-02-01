@@ -69,7 +69,7 @@ export function App() {
             if (newValue === null) {
               return
             }
-            if(newValue.id =="" ){
+            if(newValue.id ==="" ){
               await loadAllTransactions()
             }else{
               await loadTransactionsByEmployee(newValue.id)  
