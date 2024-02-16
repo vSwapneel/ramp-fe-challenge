@@ -90,7 +90,7 @@ export function App() {
                 await loadAllTransactions()
               }}
             >
-              View More Details
+              View More Detail
             </button>
           )}
         </div>
