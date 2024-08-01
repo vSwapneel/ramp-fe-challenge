@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { InputCheckbox } from "../InputCheckbox"
 import { TransactionPaneComponent } from "./types"
+import classNames from "classnames"
 
 export const TransactionPane: TransactionPaneComponent = ({
   transaction,
@@ -10,7 +11,11 @@ export const TransactionPane: TransactionPaneComponent = ({
   const [approved, setApproved] = useState(transaction.approved)
 
   return (
-    <div className="RampPane">
+    <div
+      className={classNames("RampPane", {
+        "RampPane-loading": loading,
+      })}
+    >
       <div className="RampPane--content">
         <p className="RampText">{transaction.merchant} </p>
         <b>{moneyFormatter.format(transaction.amount)}</b>
