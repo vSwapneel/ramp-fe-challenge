@@ -76,7 +76,6 @@ export function App() {
         />
 
         <div className="RampBreak--l" />
-        {console.log("Transactions ", transactions)}
         <div className="RampGrid">
           <Transactions transactions={transactions} />
 
